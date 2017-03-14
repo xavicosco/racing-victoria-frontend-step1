@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="https://www.racing.com/resources/Racing/img/favicon/hub/favicon-32x32.png" sizes="32x32">
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Bootstrap, latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Bootstrap, latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="./build/styles.min.css" />
+		<title>RACING - Frontend Task</title>
+	</head>
+	<body>
+		<!-- header inlcudes top header, image and zoom icon -->
+		<header>
+			<div class="top-header bg-black">
+				<!-- left column top header -->
+				<div class="pull-left col-md-6 col-sm-6 col-xs-8">
+					<h2 class="pull-left circle">2</h2>					
+					<div class="pull-left left20">
+						<h4 class="pull-left fg-lightgrey">Flemington</h4>
+						<h4 class="date pull-left fg-darkgrey">1 Jan 2017</h4>
+						<label class="pull-left clear-left fg-lightgrey">2.10pm 2000m Straight Draw Handicap</label>
+					</div>
+				</div>
+				<!-- right column top header -->
+				<div class="col-md-6 col-sm-6 col-xs-4 text-right">
+					<label class="pull-right spacer-md fg-lightgrey">Track condition</label>
+					<label class="pull-right clear-right fg-lightgrey">Good 3</label>
+				</div>
+			</div>
+			<img src="http://s3-ap-southeast-2.amazonaws.com/racevic.static/2017-01-01/flemington/photofinishes/race-2.jpg" alt="racing-header" />
+			<span class="icon-zoom glyphicon glyphicon-search" data-toggle="modal" data-target="#modal-racing" aria-hidden="true"></span>
+		</header>
+		<!-- list ranking -->
+		<div class="list-ranking">
+			<!-- header, headings list ranking -->
+			<ul class="head container-fluid">
+				<li class="pull-left fg-darkgrey col-md-9 col-sm-9 col-xs-12 strong">Win/Place</li>
+				<li class="pull-left fg-darkgrey col-md-1 col-sm-1 xs-hide strong text-right">Margin</li>
+				<li class="pull-left fg-darkgrey col-md-1 col-sm-1 xs-hide strong text-right">SP</li>
+				<li class="pull-left fg-darkgrey col-md-1 col-sm-1 xs-hide strong text-right">VIC</li>				
+			</ul>
+			<!-- body, content list ranking -->
+			<ul class="body container-fluid">
+				<!-- loop element <li> to load dynamically -->
+				<!-- 1st element ranking -->
+				<li class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-left fg-darkgrey col-md-9 col-sm-9 col-xs-12 strong">
+						<label class="position col-md-1 col-sm-1 col-xs-1 vertical-centering">1st</label>
+						<div class="col-md-11 col-sm-11 col-xs-11">
+							<img class="pull-left" src="http://s3-ap-southeast-2.amazonaws.com/racevic.silks/3758667033.png" alt="sinkle" />
+							<div class="pull-left rider-name">
+								<a class="strong pull-left fg-darkgrey" href="http://www.racing.com/trainers" target="_blank">10. Flying Light (4)</a>
+								<label class="pull-left clear-left"><strong>T:</strong><a class="fg-darkgrey" href="http://www.racing.com/trainers" target="_blank"> D. Hayes & T. Dabernig </a><strong>J:</strong><a class="fg-darkgrey" href="http://www.racing.com/jockeys" target="_blank"> R. Bayliss</a></label>
+							</div>
+						</div>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">Margin</label>
+						<label>2:03:07</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">SP</label>
+						<label>$3.30</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap text-right">
+						<label class="hide xs-show col-xs-12 xs-label-vic">VIC</label>
+						<label class="fg-darkgrey pull-right col-xs-6 sm-nofloat strong">$3.40</label>
+						<label class="fg-darkgrey pull-right col-xs-6 clear-right">$1.40</label>
+					</div>	
+				</li>
+				<!-- 2nd element ranking -->
+				<li class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-left fg-darkgrey col-md-9 col-sm-9 col-xs-12 strong">
+						<label class="position col-md-1 col-sm-1 col-xs-1 vertical-centering">2nd</label>
+						<div class="col-md-11 col-sm-11 col-xs-11">
+							<img class="pull-left" src="http://s3-ap-southeast-2.amazonaws.com/racevic.silks/3847161458.png" alt="sinkle" />
+							<div class="pull-left rider-name">
+								<a class="strong pull-left fg-darkgrey" href="http://www.racing.com/trainers" target="_blank">8. Master Zephyr (GB)</a>
+								<label class="pull-left clear-left"><strong>T:</strong><a class="fg-darkgrey" href="http://www.racing.com/trainers" target="_blank"> D.K.Weir </a><strong>J:</strong><a class="fg-darkgrey" href="http://www.racing.com/jockeys" target="_blank"> B.Allen</a></label>
+							</div>
+						</div>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">Margin</label>
+						<label>0.75L</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">SP</label>
+						<label>$3.60</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap text-right">
+						<label class="hide xs-show col-xs-12 xs-label-vic">VIC</label>
+						<label class="fg-darkgrey pull-right col-xs-6 sm-nofloat">-</label>
+						<label class="fg-darkgrey pull-right col-xs-6 clear-right">$1.60</label>
+					</div>	
+				</li>
+				<!-- 3rd element ranking -->
+				<li class="col-md-12 col-sm-12 col-xs-12">
+					<div class="pull-left fg-darkgrey col-md-9 col-sm-9 col-xs-12 strong">
+						<label class="position col-md-1 col-sm-1 col-xs-1 vertical-centering">3rd</label>
+						<div class="col-md-11 col-sm-11 col-xs-11">
+							<img class="pull-left" src="http://s3-ap-southeast-2.amazonaws.com/racevic.silks/4046564146.png" alt="sinkle" />
+							<div class="pull-left rider-name">
+								<a class="strong pull-left fg-darkgrey" href="http://www.racing.com/trainers" target="_blank">7. Kourkam (FR) (1)</a>
+								<label class="pull-left clear-left"><strong>T:</strong><a class="fg-darkgrey" href="http://www.racing.com/trainers" target="_blank"> A.J.McEvoy </a><strong>J:</strong><a class="fg-darkgrey" href="http://www.racing.com/jockeys" target="_blank"> K.McEvoy</a></label>
+							</div>
+						</div>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">Margin</label>
+						<label>2L</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap vertical-centering text-right">
+						<label class="hide xs-show">SP</label>
+						<label>$7.50</label>
+					</div>
+					<div class="pull-left fg-darkgrey col-md-1 col-sm-1 col-xs-4 xs-wrap text-right">
+						<label class="hide xs-show col-xs-12 xs-label-vic">VIC</label>
+						<label class="fg-darkgrey pull-right col-xs-6 sm-nofloat">-</label>
+						<label class="fg-darkgrey pull-right col-xs-6 clear-right">$2.00</label>
+					</div>	
+				</li>				
+			</ul>
+		</div>
+		<!-- anchor Full Results -->
+		<a href="http://www.racing.com" target="_blank" id="full-results" class="pull-right container-fluid fg-darkgrey">
+			Full Results
+			<span class="icon-arrow glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+		</a>
+		
+		<!-- Lightbox/Modal to show background image -->
+		<div class="modal fade" id="modal-racing" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h5 class="modal-title">RACING Victoria</h5>
+					</div>
+					<div class="modal-body">
+						<img src="http://s3-ap-southeast-2.amazonaws.com/racevic.static/2017-01-01/flemington/photofinishes/race-2.jpg" alt="racing-header" />
+					</div>        
+				</div>			  
+			</div>
+		</div>
+	</body>
+</html>
